@@ -1,0 +1,18 @@
+pip install pipreqs
+	pipreqs          (for making requirement file)
+
+pip install 
+pip uninstall 
+
+pip install --upgrade pip
+pip install -r requirements.txt
+
+pip list
+
+
+
+
+
+pip install ipython-cache
+
+%load_ext cache

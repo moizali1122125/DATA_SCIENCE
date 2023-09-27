@@ -1,0 +1,44 @@
+DataSet Websites:
+
+1. Google Data Search-Engine
+
+2. Kaggle
+
+3. Open Data Pakistan
+
+4. The world Data Bank
+5. US GOVT Data
+
+6. FAOSTAT
+
+7. EUROSTAT
+
+8. Harvard Dataverse
+
+9. UCI Machine Learning Repository 
+
+DataSet 
+Portals:
+
+10. Open Data Inception
+11. Open Data Soft
+
+12. CERN Open Data Portal
+
+13. Knoema
+
+
+
+For Searching Research Papers:
+Scopus
+
+
+
+For Trained Models:
+
+seedbank machine learning projects
+
+
+
+Search Engine:
+WolframAlpha

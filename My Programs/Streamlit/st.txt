@@ -1,0 +1,2 @@
+Streamlit Cheet Sheet:
+ 1. For running App ( streamlit run test.py )

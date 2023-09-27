@@ -1,0 +1,144 @@
+For Creating DataBase:
+	create database moizdb;
+	show databases;
+	use moizdb;
+
+For Creating Tables:	DROP table students;
+	for creating columns(fields):
+		create table students (
+		stuID int,
+		stuNAME varchar(45)
+		stuAGE int,
+		stuCITY varchar(50));
+	   	  show tables;
+	   	  DESC students;
+  	for creating rows(records):
+		INSERT INTO students(stuID,stuNAME,stuAGE,stuCITY)
+		VALUES(1,'Hamza',24,'Faisalabad');
+	   	  SELECT * FROM students;
+  	    	  select stuAGE from students;
+  	    	  select stuAGE from students where stuAGE <30;
+    	for adding column in created DataSet:
+		alter table students add column stuCOUNTRY text;
+    	for putting data in column:
+		update students set stuCOUNTRY='Pakistan' where stuID=1;
+		update students set stuCOUNTRY='Pakistan' where stuAGE>30;
+        	update students set stuCOUNTRY='' where stuAGE>30;  	    #for removing data
+	 	delete from students where stuCOUNTRY='';
+    	for alter the table:
+		alter table students 
+		add email varchar(100)
+		after stuAGE;
+	  	  select * from students;
+    	for removing the column:
+		alter table students drop email;
+    	for changing column name:
+		alter table students change stuAGE stu_umar varchar(100);	     
+
+for adding rows(records):	DELETE FROM students WHERE stuAGE=28;
+	insert into students (stuID,stuNAME,stuAGE,stuCITY,stuCOUNTRY) values (4,'Aammar',20,'Frankfurt,'Germany');
+	  select * from students;
+for printing unique values:
+	select distinct stuAGE from students;
+
+
+CONSTRAINTS:	ALTER table students DROP INDEX stuAGE;
+	NULL:
+		create table school(
+		stuID int NOT NULL,
+		stuNAME varchar(50),
+		stuAGE int);
+	  	  DESC school;
+		insert into school (stuID,stuNAME,stuAGE) values (NULL,'Aammar',22);
+		alter table students modify stuAGE int NOT NULL;			#for creating condition in created DataSet
+		alter table students ADD NOT NULL (stuAGE);
+	UNIQUE:
+		create table school(
+		stuID int UNIQUE,
+		stuNAME varchar(50),
+		stuAGE int);
+	  	  DESC school;
+		insert into school (stuID,stuNAME,stuAGE) values (1,'Aammar',22);
+	PRIMARY KEY:
+		create table school(
+		stuID int NOT NULL UNIQUE,
+		stuNAME varchar(50),
+		stuAGE int);
+	  	  DESC school;
+		insert into school (stuID,stuNAME,stuAGE) values (NULL,'Aammar',22);
+	FOREIGN KEY:
+		create table orders(
+		orderID int NOT NULL,
+		orderNUM int NOT NULL,
+		customerID int,
+		PRIMARY KEY (orderID),
+		FOREIGN KEY (customerID) REFERENCES orders(orderID));
+	CHECK:
+		create table school(
+		stuID int,
+		stuNAME varchar(255),
+		stuAGE int,
+		stuCITY varchar(255),
+		CHECK (stuAGE>=18));	OR	CONSTRAINT school CHECK (stuAGE>=18 AND stuCITY='faisalabad')
+	  	  DESC school;
+		insert into school (stuID,stuNAME,stuAGE) values (5,'Aammar',22,Sadiqabad);
+	DEFAULT:
+		create table school(
+		stuID int NOT NULL,
+		stuNAME varchar(255),
+		stuAGE int);
+		stuCITY varchar(255) DEFAULT 'Faisalabad');
+	  	  DESC school;
+		insert into school (stuID,stuNAME,stuAGE) values (6,'Aammar',22,Sadiqabad);
+	INDEX:
+		create INDEX index-name ON school(stuID,stuNAME,stuAGE,stu,CITY);
+		  DESC school;
+		  SELECT * FROM school;
+
+AUTO INCREMENT:	(This will give me auto [stuID]numbers without INSERT function)
+	create table school(
+	stuID int NOT NULL AUTO_INCREMENT,
+	stuNAME varchar(255),
+	stuAGE int,
+	PRIMARY KEY (stuID));
+	  DESC school;
+	INSERT INTO school (stuNAME,stuAGE) VALUES ('Aammar',22);
+		for ceating index value sequence after deleting any rows:
+			SET @num:=0;
+			UPDATE school SET stuID=@num:=(@num+1);
+			ALTER table school AUTO_INCREMENT=1;
+
+SELECT Clause in MySQL:
+	USE classicmodels;
+	SELECT customerName,phone,city,state
+	FROM customers;
+	WHERE city = 'Paris';
+	WHERE customerNumber=103;	#103 indexNumber
+	ORDER BY customerName;
+		--				#=--
+		SELECT  productName,		
+			productCode,
+			MSRP AS MSRP_old,
+			MSRP + (MSRP * 10.0/ 100.0) AS MSRP_medium	#DMAS rule  ÷×+-
+		  	FROM products;	
+
+	WHERE Clause in MySQL:
+		=
+		!=
+		<>
+		<
+		<=
+		>
+		>=
+
+	 :
+		SELECT * FROM products 
+		WHERE productLine  = 'Motorcycles' AND buyPrice > 65;			# output both sides
+		WHERE productLine  = 'Motorcycles' AND NOT buyPrice > 65;		# convert buyPrice>65 to <65	
+		WHERE productLine  = 'Motorcycles' OR buyPrice > 65;			# random right or left side output
+		WHERE productLine  = 'Motorcycles' OR buyPrice > 65 AND MSRP > 100;	
+ 		WHERE productLine  = 'Motorcycles' IN ('Motercycles',Classic cars','Trucks and Buses'); 
+		WHERE productLine  = 'Motorcycles' IN NOT ('Motercycles',Classic cars','Trucks and Buses');
+		WHERE quantityInStock BETWEEN 100 AND 600;
+	
+			

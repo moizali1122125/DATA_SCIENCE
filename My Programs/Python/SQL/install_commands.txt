@@ -1,0 +1,9 @@
+install 1- MySQL Server
+	2- MySQL Shell
+	3- MySQL Workbench
+
+After installation complete set enviroment (Go to MySQL Server\bins & copy path or Open System Environment or Create variable path edit new path)
+
+  mysql -u root -p         (To activate MYSQL in conda)
+	
+  SELECT user();           (For finding UserName)

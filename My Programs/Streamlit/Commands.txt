@@ -1,0 +1,34 @@
+first downlaod miniconda and open prompt
+
+1_  conda create -n streamlit python=3.10      
+
+2_  conda env list
+
+3_  conda activate streamlit   or    conda activate base
+  1- conda list
+
+5_  cd Desktop
+  6- mkdir streamlit_dashboards
+  7- cd streamlit_dashboards
+  
+
+
+6_  conda remove --name base pandas
+
+7_  conda env remove -n py34
+
+8_  conda install --channel conda-forge python=3.4
+
+9_  conda update conda
+
+
+
+For R Programing:
+
+1_  conda create -n R r-base=4.2.3
+
+2_  conda activate R
+
+3_  R
+
+4_  install.packages("ggplot2")

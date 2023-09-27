@@ -1,0 +1,26 @@
+1. Python
+2. Pylance
+3. Python Indent
+4. Python Environment Manager
+5. Jupyter
+6. Jupyter Keymap
+7. Jupyter Cell Tags 
+8. Jupyter Notebook Renderers 
+9. MySQL
+10. Rainbow CSV
+11. Excel Viewer
+12. GitHubs Pull Requests and Issues
+13. GitHub Copilot
+14. GitHub Theme
+15. Markdown All in One
+16. Grammarly
+17. Code Spell Checker
+18. CodeSnap
+19. vscode-pdf
+20. .NET Install Tool For Extention Authors
+21. Codeium
+22. Data Wrangler (Preview)
+23. Docker
+24. vscode-pdf
+25. isort
+26. R

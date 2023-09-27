@@ -1,0 +1,7 @@
+1. Make requirement file by using (pipreqs)
+
+2. Make Repository on GitHub
+
+3. Open Streamlit webpage  ( https://share.streamlit.io/ ) 
+
+4. 

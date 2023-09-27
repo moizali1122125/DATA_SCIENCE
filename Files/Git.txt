@@ -1,0 +1,12 @@
+
+
+git push --no-verify
+
+
+
+
+git config --global user.name "moiz1122125"
+
+
+
+git config --global user.email "moizali1122125@gmail.com"
