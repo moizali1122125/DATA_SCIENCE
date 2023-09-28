@@ -24,3 +24,5 @@
 24. vscode-pdf
 25. isort
 26. R
+
+27. Live Preview
