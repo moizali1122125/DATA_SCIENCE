@@ -5,7 +5,7 @@ git push --no-verify
 
 
 
-git config --global user.name "moiz1122125"
+git config --global user.name "moizali1122125"
 
 
 
